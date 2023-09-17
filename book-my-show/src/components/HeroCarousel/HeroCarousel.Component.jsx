@@ -51,7 +51,7 @@ const settingsLG= {
   autoplay: true,
   speed: 2000,
   autoplaySpeed: 2000,
-  cssEase: "linear",
+  cssEase: "linear"
 }
 
 const settings= {
@@ -65,31 +65,33 @@ const settings= {
   autoplay: true,
   speed: 2000,
   autoplaySpeed: 2000,
-  cssEase: "linear",
+  cssEase: "linear"
 }
 
-  return (
+
+return (
   <>
-  <div className='lg: hidden'>
+  <div className='lg:hidden'>
     <HeroSlider {...settings}>
        {
-        images.map((image) => {
-        <div className='w-full h-56 md:h-80 py-3'>
+        images.map((images, index) => (
+        <div className='w-full h-56 md:h-80 py-3' key={index}>
           <img src={`https://image.tmdb.org/t/p/original${images.backdrop_path}`} alt="Hero Banner" className='w-full h-full rounded-md object-cover' />
         </div>
-    }) 
-       }
-    </HeroSlider>   
+    ))
+    } 
+  </HeroSlider>   
   </div>
+
   <div className='hidden lg:block'>
   <HeroSlider {...settingsLG}>
        {
-        images.map((image) => {
-        <div className='w-full h-96 px-2 py-3'>
+        images.map((images, index) => (
+        <div className='w-full h-96 px-2 py-3' key={index}>
           <img src={`https://image.tmdb.org/t/p/original${images.backdrop_path}`} alt="Hero Banner" className='w-full h-full rounded-md object-cover' />
         </div>
-    }) 
-       }
+    ))
+      } 
     </HeroSlider> 
   </div>
   </>

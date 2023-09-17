@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 // Components
-import EntertainmentCard from '../components/Entertainment/EntertainmentCard.Component';
+import EntertainmentCardSlider from '../components/Entertainment/EntertainmentCard.Component';
 import HeroCarousel from '../components/HeroCarousel/HeroCarousel.Component';
 import PosterSlider from '../components/PosterSlider/PosterSlider.Component';
 
@@ -19,7 +19,7 @@ const HomePage = () => {
      {/*Adding Tailwind properties*/}
      <div className='container mx-auto px-4 md:px-12 my-8'>
         <h1 className='text-2xl font-bold text-gray-800 sm:ml-3 ml-0 my-3'>The best of Entertainment</h1>
-        <EntertainmentCard /> {/* so that we can scroll among cards accordingly */}
+        <EntertainmentCardSlider /> {/* so that we can scroll among cards accordingly */}
      </div>
      <div className='container mx-auto px-4 md:px-12 my-8'>
         <PosterSlider
